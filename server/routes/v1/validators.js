@@ -4,7 +4,7 @@ const log = require('../../lib/logger')({ name: 'validators' })
 const cache = {}
 
 const fetchValidators = () => {
-  const validatorURI = encodeURIComponent(process.env.REACT_APP_VALIDATOR)
+  const validatorURI = encodeURIComponent(process.env.REACT_APP_NETWORK)
   return axios
     .get(`${process.env.REACT_APP_DATA_URL}/validators/${validatorURI}`)
     .then((response) => response.data.validators)
